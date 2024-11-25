@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 		{"i", print_int},
 		{"d", print_int},
 		{"s", print_str},
+		{"%", print_percent},
 		{NULL, NULL}
 	};
 	unsigned int i = 0, j = 0, len = 0;
@@ -21,7 +22,7 @@ int _printf(const char *format, ...)
 	va_start(arg_list, format);
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == "%")
+		if (format[i] == '%')
 		{
 			j = 0;
 			while (indicator[j].specifier != NULL)
@@ -41,8 +42,8 @@ int _printf(const char *format, ...)
 			len += 1;
 			_putchar(format[i]);
 		}
-	}
 		i++;
+	}
 	va_end(arg_list);
 	return (len);
 }
