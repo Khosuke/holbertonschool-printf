@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stddef.h>
+#include <unistd.h>
+#include <limits.h>
 
 /**
  * print_char - print a char
@@ -45,7 +48,7 @@ int print_str(va_list arg_list)
 
 int recursion_int(int n)
 {
-	if (n / 10)
+	if (n / 10 && n != INT_MIN)
 	{
 		recursion_int(n / 10);
 	}
@@ -64,16 +67,18 @@ int print_int(va_list arg_list)
 {
 	int num = 0;
 	int len = 1;
-
+	
 	num = va_arg(arg_list, int);
 
 	if (num < 0)
 	{
+		_putchar ('-');
 		num = -num;
-		_putchar('-');
-		len++;
 	}
-	recursion_int(num);
+	if (num == INT_MIN)
+		(write(1, "2147483648", 10));
+	else
+		recursion_int(num);
 
 	while (num > 9)
 	{

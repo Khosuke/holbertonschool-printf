@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-#include <stdlib.h>
+#include <stddef.h>
 /**
  * struct format_type - Structure of format specifier
  * @specifier: the data type specifier
@@ -17,6 +17,7 @@ typedef struct format_type
 int _printf(const char *format, ...);
 int print_char(va_list arg_list);
 int print_int(va_list arg_list);
+int recursion_int(int n);
 int print_str(va_list arg_list);
 int print_percent(va_list arg_list);
 int _putchar(char c);
