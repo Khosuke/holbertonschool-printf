@@ -74,6 +74,7 @@ int print_int(va_list arg_list)
 	{
 		_putchar ('-');
 		num = -num;
+		len++;
 	}
 	if (num == INT_MIN)
 		(write(1, "2147483648", 10));
