@@ -82,7 +82,7 @@ int print_int(va_list arg_list)
 	{
 		_putchar('2');
 		num = 147483648;
-		len ++;
+		len++;
 	}
 		recursion_int(num);
 
