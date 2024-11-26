@@ -24,6 +24,7 @@ int print_char(va_list arg_list)
 int print_str(va_list arg_list)
 {
 	int i = 0;
+	int len = 0;
 	char *str = va_arg(arg_list, char *);
 
 	if (str == NULL)
@@ -34,10 +35,11 @@ int print_str(va_list arg_list)
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
+		len++;
 		i++;
 	}
 
-	return (i);
+	return (len);
 }
 
 /**
@@ -67,7 +69,7 @@ int print_int(va_list arg_list)
 {
 	int num = 0;
 	int len = 1;
-	
+
 	num = va_arg(arg_list, int);
 
 	if (num < 0)
@@ -77,8 +79,11 @@ int print_int(va_list arg_list)
 		len++;
 	}
 	if (num == INT_MIN)
-		(write(1, "2147483648", 10));
-	else
+	{
+		_putchar('2');
+		num = 147483648;
+		len += 10;
+	}
 		recursion_int(num);
 
 	while (num > 9)
@@ -86,7 +91,7 @@ int print_int(va_list arg_list)
 		num = num / 10;
 		len++;
 	}
-	return (1);
+	return (len);
 }
 
 /**

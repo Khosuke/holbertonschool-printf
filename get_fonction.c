@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				{
 					if (format[i + 1] == '%')
 						len++;
-					(indicator[j].function)(arg_list);
+					len += (indicator[j].function)(arg_list);
 					i++;
 					break;
 				}
