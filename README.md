@@ -35,7 +35,7 @@ Here you can see that we have the exact **same output** as the **original printf
   
   Finally, here is the result of valgrind, to see if our code have memory issues :  
     
-    [!Légende](https://i.ibb.co/HHZLLKw/valgrind.png)
+[!Légende](https://i.ibb.co/HHZLLKw/valgrind.png)
 
 ## Flowchart
 /* Flowchart */
