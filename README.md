@@ -1,7 +1,6 @@
 # project printf
 
 The functions _printf() produce output according to a format as described below. The printf function write output to stdout, the standard output stream. 
-/* Description du projet et de la fonction printf */
 
 ## Compilation
 
@@ -18,7 +17,7 @@ To run this program properly, you need :
 
 ## Exemple of usage
 
-/* Des exemples d'utilisation de la fonction _printf (code snippets / screenshots…) avec le résultat en STDOUT */
+![Légende](https://i.ibb.co/sjR1nZL/example-of-usage.png)
 
 ## Man page
 
@@ -30,6 +29,7 @@ To run this program properly, you need :
 ## Flowchart
 /* Flowchart */
 
+### Authors
 
-> Frederic Iglesias Montero (Khosuke)
-> Julien Noailles (Faf-dev)
+**Frederic Iglesias Montero (Khosuke)**
+**Julien Noailles (Faf-dev)**
