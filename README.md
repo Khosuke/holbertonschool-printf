@@ -31,5 +31,5 @@ To run this program properly, you need :
 
 ### Authors
 
-**Frederic Iglesias Montero (Khosuke)**
+**Frederic Iglesias Montero (Khosuke)**  
 **Julien Noailles (Faf-dev)**
