@@ -1,6 +1,6 @@
 # project printf
 
-The functions _printf() produce output according to a format as described below. The _printf function write output to stdout, the standard output stream. It should always return the length of the format.
+The functions **_printf()** produce output according to a format as described below. The _printf function write output to stdout, the standard output stream. It should always return the length of the format. If an error occured with the format, it will return -1.
 
 ## Compilation
 
@@ -18,6 +18,17 @@ To **run** this program **properly**, you need :
 ## Exemple of usage
 
 ![Légende](https://i.ibb.co/sjR1nZL/example-of-usage.png)
+
+```#include "main.h"
+
+
+
+_printf("Hello, World!"); /* The output should be : Hello, World! */
+_printf("%c", 'A'); /* The output should be : A */
+_printf("%s", "Hello, World!"); /* The output should be : Hello, World! */
+_printf("%d", 1234); /* The output should be : 1234 */
+_printf("%%"); /* the output should be : % */
+_printf("%i", 1234) /* the output should be : 1234 */```
 
 ## Man page
 
