@@ -19,11 +19,7 @@ To **run** this program **properly**, you need :
 
 ![Légende](https://i.ibb.co/sjR1nZL/example-of-usage.png)
 
-`#include "main.h"
-
-
-
-_printf("Hello, World!"); /* The output should be : Hello, World! */
+`#include "main.h"_printf("Hello, World!"); /* The output should be : Hello, World! */
 _printf("%c", 'A'); /* The output should be : A */
 _printf("%s", "Hello, World!"); /* The output should be : Hello, World! */
 _printf("%d", 1234); /* The output should be : 1234 */
