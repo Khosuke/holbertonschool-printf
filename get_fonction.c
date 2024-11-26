@@ -26,15 +26,17 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			/* loop on each specifier of our structure */
-			for (j = 0; indicator[j].specifier != NULL; j++)
+			for (j = 0; indicator[j].specifier; j++)
 			{
 				if (format[i + 1] == *indicator[j].specifier)
 				{
-					if (format[i + 1] == '%')
-						len++;
 					len += (indicator[j].function)(arg_list);
 					i++;
 					break;
+				}
+				if (indicator[j + 1].specifier == NULL)
+				{
+					return (-1);
 				}
 			}
 		}
