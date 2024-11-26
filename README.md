@@ -1,6 +1,6 @@
 # project printf
 
-The functions **_printf()** produce output according to a format as described below. The _printf function write output to stdout, the standard output stream. It should always return the length of the format. If an error occured with the format, it will return -1.
+The functions **_printf()** produce output according to a format as described below. The _printf function **write output to stdout**, the standard output stream. It should always **return the length of the format**. If an error occured with the format, it will **return -1**.
 
 ## Compilation
 
