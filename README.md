@@ -27,14 +27,15 @@ To run this program properly, you need :
 
 We've tried to push our code to the limit, with some stress test like this :  
 
-[!Légende](https://i.ibb.co/LPz7Wtf/test-c.png)
+![Légende](https://i.ibb.co/LPz7Wtf/test-c.png)
 
 Here you can see that we have the exact **same output** as the **original printf** function.  
 
-[!Légende](https://i.ibb.co/YbB8nr7/output-test.png)  
+![Légende](https://i.ibb.co/YbB8nr7/output-test.png)  
   
   Finally, here is the result of valgrind, to see if our code have memory issues :
-[!Légende](https://i.postimg.cc/fR4xKn6s/valgrind.png)
+  
+![Légende](https://i.postimg.cc/fR4xKn6s/valgrind.png)
 
 ## Flowchart
 /* Flowchart */
