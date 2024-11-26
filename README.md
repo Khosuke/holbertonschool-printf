@@ -10,10 +10,10 @@ the command to compile this program should be :
 
 ## Requirements
 
-To run this program properly, you need : 
-* A text editor 🤡 (like vi, emacs, vscode...) 
-* Ubuntu 20.04 LTS or newest 
-* gcc to compile the program
+To **run** this program **properly**, you need : 
+* **A text editor** 🤡 (like vi, emacs, vscode...) 
+* **Ubuntu 20.04 LTS** or newest 
+* **gcc** to compile the program
 
 ## Exemple of usage
 
@@ -33,7 +33,7 @@ Here you can see that we have the exact **same output** as the **original printf
 
 ![Légende](https://i.ibb.co/YbB8nr7/output-test.png)  
   
-  Finally, here is the result of valgrind, to see if our code have memory issues :
+  Finally, here is the **result of valgrind**, to see if our code have **memory issues** :
   
 ![Légende](https://i.ibb.co/HHZLLKw/valgrind.png)
 
