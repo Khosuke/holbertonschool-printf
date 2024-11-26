@@ -1,0 +1,31 @@
+NAME
+		_printf - Prints a series of characters and values with a specified format
+
+SYNOPSIS
+		int _printf(const char *format, ...);
+
+DESCRIPTION
+		The function printf produce an output according to a format described below
+
+	conversion specifiers
+		c		Takes an int argument (or the int value of a char) and print it as its ascii value
+		s		The char * argument is expected to be a pointer to an array of character type. 
+				Prints each characters of the array up to (but not including) a terminating null byte. 
+				If array is NULL then prints '(null)'.
+		d, i	The int argument is converted to a signed number and prints each digit of the number.	
+		%		The % (used with '%%') allows to print a single '%' instead of using it for a specifier.
+
+RETURN VALUE
+		If successful, return the number of bytes printed by the function.
+		If an output error is encountered, a negative value is returned.
+
+EXEMPLE
+		char *user = "Bob";
+		_printf("Hello %s\n", user);
+		output :
+		$~ Hello Bob
+
+Date
+		26/11/2024
+Authors
+		Frédéric Iglesias Montero & Julien Noailles
