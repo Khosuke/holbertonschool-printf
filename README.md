@@ -1,6 +1,6 @@
 # project printf
 
-The functions _printf() produce output according to a format as described below. The printf function write output to stdout, the standard output stream. 
+The functions _printf() produce output according to a format as described below. The _printf function write output to stdout, the standard output stream. It should always return the length of the format.
 
 ## Compilation
 
@@ -24,7 +24,18 @@ To run this program properly, you need :
 /* Man page */
 
 ## Test 
-/* Testing (comment nous l'avons tester + exemples) + valgrind pour les failles mémoire… */
+
+We've tried to push our code to the limit, with some stress test like this :  
+
+[!Légende](https://i.ibb.co/LPz7Wtf/test-c.png)
+
+Here you can see that we have the exact **same output** as the **original printf** function.  
+
+[!Légende](https://i.ibb.co/YbB8nr7/output-test.png)  
+  
+  Finally, here is the result of valgrind, to see if our code have memory issues :  
+
+  [!Légende](https://i.ibb.co/HHZLLKw/valgrind.png) 
 
 ## Flowchart
 /* Flowchart */
