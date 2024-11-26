@@ -7,7 +7,7 @@ The functions _printf() produce output according to a format as described below.
 
 the command to compile this program should be :
 
-!(https://ibb.co/6RSSn24)
+![Légende](https://i.ibb.co/4ZLLmcj/compilation-command.png)
 
 #### Requirements
 
