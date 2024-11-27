@@ -13,6 +13,7 @@ int (*get_function(char format))(va_list)
 		{"i", print_int},
 		{"d", print_int},
 		{"s", print_str},
+		{"b", print_binary},
 		{"%", print_percent},
 		{NULL, NULL}
 	};

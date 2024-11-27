@@ -106,3 +106,43 @@ int print_percent(va_list arg_list)
 	_putchar(37);
 	return (1);
 }
+
+/**
+ * recursion_binary - convert an int into binary
+ * @n: int to convert
+ * Return: always 0
+ */
+
+int recursion_binary(unsigned int n)
+{
+	if (n > 1)
+	{
+		recursion_binary(n / 2);
+	}
+		_putchar(n % 2 + '0');
+
+	return (0);
+}
+
+/**
+ * print_binary - print the binary code of an int
+ * @arg_list: arguments list
+ * Return: len of binary
+ */
+
+int print_binary(va_list arg_list)
+{
+	unsigned int num = 0;
+	int len = 1;
+
+	num = va_arg(arg_list, unsigned int);
+
+		recursion_binary(num);
+
+	while (num > 2)
+	{
+		num = num / 2;
+		len++;
+	}
+	return (len);
+}
