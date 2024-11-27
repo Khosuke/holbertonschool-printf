@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _printf - print arguments passed to the function
- * @format: string passed to the function
- * Return: lenght of the format and its arguments
+ * get_function - search the corresponding function
+ * @format: character to check
+ * Return: the desired function, or NULL
  */
 
-int _printf(const char *format, ...)
+int (*get_function(char format))(va_list)
 {
 	format_t indicator[] = {
 		{"c", print_char},
@@ -16,8 +16,33 @@ int _printf(const char *format, ...)
 		{"%", print_percent},
 		{NULL, NULL}
 	};
-	unsigned int i = 0, j = 0, len = 0;
+
+	unsigned int j = 0;
+
+	for (j = 0; indicator[j].specifier; j++)
+	{
+		if (format == *indicator[j].specifier)
+		{
+			return (indicator[j].function);
+		}
+	}
+	return (NULL);
+}
+/**
+ * _printf - print arguments passed to the function
+ * @format: string passed to the function
+ * Return: lenght of the format and its arguments
+ */
+
+int _printf(const char *format, ...)
+{
+
+	unsigned int i = 0, len = 0;
+	int (*f)(va_list);
 	va_list arg_list;
+
+	if (format == NULL)
+		return (-1);
 
 	va_start(arg_list, format);
 	/* loop on each caracter of the string format */
@@ -25,24 +50,22 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			/* loop on each specifier of our structure */
-			for (j = 0; indicator[j].specifier; j++)
+			f = get_function(format[i + 1]);
+			if (f != NULL)
 			{
-				if (format[i + 1] == *indicator[j].specifier)
-				{
-					len += (indicator[j].function)(arg_list);
-					i++;
-					break;
-				}
-				if (indicator[j + 1].specifier == NULL)
-				{
-					return (-1);
-				}
+				len += f(arg_list);
 			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				len++;
+			}
+			i++;
 		}
 		else
 		{
-			len += 1;
+			len++;
 			_putchar(format[i]);
 		}
 	}
