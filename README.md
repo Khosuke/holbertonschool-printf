@@ -38,7 +38,8 @@ Here you can see that we have the exact **same output** as the **original printf
 ![Légende](https://i.ibb.co/HHZLLKw/valgrind.png)
 
 ## Flowchart
-/* Flowchart */
+
+![Légende](https://i.ibb.co/nfbnWd0/Diagramme-sans-nom-drawio.png)
 
 ### Authors
 
