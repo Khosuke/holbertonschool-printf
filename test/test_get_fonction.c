@@ -14,6 +14,7 @@ int (*get_function(char format))(va_list)
 		{"d", print_int},
 		{"s", print_str},
 		{"u", print_unsigned_int},
+		{"o", print_octal},
 		{"x", print_hexa_lower},
 		{"X", print_hexa_upper},
 		{"%", print_percent},
@@ -42,7 +43,7 @@ int _printf(const char *format, ...)
 	unsigned int i = 0, len = 0;
 	int (*f)(va_list);
 	va_list arg_list;
-	
+
 	if (format == NULL)
 		return (-1);
 
@@ -67,8 +68,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			len++;
 			_putchar(format[i]);
+			len++;
 		}
 	}
 	va_end(arg_list);
