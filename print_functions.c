@@ -71,8 +71,8 @@ int print_reverse_str(va_list arg_list)
 
 		while (i >= 0 && str != NULL)
 		{
-			_putchar(str[i]);
 			i--;
+			_putchar(str[i]);
 		}
 	}
 	return (len);
