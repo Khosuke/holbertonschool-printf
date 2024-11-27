@@ -50,31 +50,22 @@ int print_str(va_list arg_list)
 
 int print_reverse_str(va_list arg_list)
 {
-	int i;
+	int i = 0;
 	int len = 0;
 	char *str = va_arg(arg_list, char *);
 
 	if (str == NULL)
 	{
 		str = "(null)";
-
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			_putchar(str[i]);
-		 	len++;
-		}
 	}
-	else
+
+	while (str[i] != '\0')
 	{
-		for (i = 0; str[i] != '\0'; i++)
-			len++;
-
-		while (i >= 0 && str != NULL)
-		{
-			i--;
-			_putchar(str[i]);
-		}
+		_putchar(str[i]);
+		len++;
+		i++;
 	}
+
 	return (len);
 }
 
@@ -180,5 +171,46 @@ int print_binary(va_list arg_list)
 		num = num / 2;
 		len++;
 	}
+	return (len);
+}
+
+/**
+ * print_rot13 - convert a string into rot13 language
+ * @arg_list: arguments list
+ * Return: len of the string
+ */
+
+int print_rot13(va_list arg_list)
+{
+	int i = 0;
+	int len = 0;
+	char *str = va_arg(arg_list, char *);
+	char c;
+
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			c = ((str[i] - 65 + 13) % 26) + 65;
+		}
+		else if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			c = ((str[i] - 97 + 13) % 26) + 97;
+		}
+		else
+		{
+			c = str[i];
+		}
+		_putchar(c);
+		len++;
+		i++;
+	}
+
 	return (len);
 }
