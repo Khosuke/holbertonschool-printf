@@ -14,6 +14,7 @@ int (*get_function(char format))(va_list)
 		{"d", print_int},
 		{"s", print_str},
 		{"b", print_binary},
+		{"r", print_reverse_str},
 		{"%", print_percent},
 		{NULL, NULL}
 	};

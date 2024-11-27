@@ -43,6 +43,36 @@ int print_str(va_list arg_list)
 }
 
 /**
+ * print_reverse_str - print a string in reverse
+ * @arg_list: arguments list
+ * Return: len of the string
+ */
+
+int print_reverse_str(va_list arg_list)
+{
+	int i = 0;
+	int len = 0;
+	char *str = va_arg(arg_list, char *);
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+
+	while (str[i] != '\0')
+	{
+		len++;
+		i++;
+	}
+	while (i >= 0)
+	{
+		_putchar(str[i]);
+		i--;
+	}
+	return (len);
+}
+
+/**
  * recursion_int - recall the function if n can be div by 10
  * @n: num from print_int
  * Return: always 0
