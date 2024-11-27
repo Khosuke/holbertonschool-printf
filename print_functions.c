@@ -139,7 +139,7 @@ int print_binary(va_list arg_list)
 
 		recursion_binary(num);
 
-	while (num > 2)
+	while (num > 1)
 	{
 		num = num / 2;
 		len++;
