@@ -1,0 +1,54 @@
+.Dd 26/11/24               \" DATE
+.Dt _printf
+
+.Sh NAME
+\fB_printf\fP - Prints a series of characters and values with a specified format
+
+.Sh SYNOPSIS
+#include "main.h"
+
+int \fB_printf\fP (const char *format, ...);
+
+.Sh DESCRIPTION
+The function \fB_printf\fP produce an output according to a format described below
+.Pp
+.Ss conversion specifiers
+Theses specifiers are single character used to print an argument with its corresponding format, they must be preceded with the '%' character.
+
+A list of conversion specifiers and their descriptions:
+
+.Bl -tag -width -indent  \" Begins a tagged list
+.It Fl c
+Takes an int argument (or the int value of a char) and print it as its ascii value. It is used to print a single character.
+.It Fl s
+The char * argument is expected to be a pointer to an array of character type. 
+Prints each characters of the array up to (but not including) a terminating null byte. 
+If array is NULL then prints '(null)'.
+.It Fl d, i
+The int argument is converted to a signed number and prints each digit of the number, with it's sign first if it's negative. 
+.It Fl %
+The % (used with '%%') allows to print a single '%' instead of using it for a specifier.
+.El
+
+.Sh RETURN VALUE
+ If successful, return the number of bytes printed by the function.
+ If an output error is encountered, a negative value is returned.
+
+.Sh EXEMPLE
+.Bl -tag -width -indent
+.It Pa Print a char:
+_printf("%c", 'K');
+.It Pa output : 
+K
+.It Pa Print a string:
+ _printf("Hello %s", "Bob");
+.It Pa output : 
+Hello Bob
+.It Pa Print a number:
+_printf("%d", 12345);
+.It Pa output :
+12345
+.El
+
+.Sh Authors
+Frédéric Iglesias Montero & Julien Noailles for Holberton School
