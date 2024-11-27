@@ -50,24 +50,30 @@ int print_str(va_list arg_list)
 
 int print_reverse_str(va_list arg_list)
 {
-	int i = 0;
+	int i;
 	int len = 0;
 	char *str = va_arg(arg_list, char *);
 
 	if (str == NULL)
 	{
 		str = "(null)";
-	}
 
-	while (str[i] != '\0')
-	{
-		len++;
-		i++;
+		for (i = 0; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		 	len++;
+		}
 	}
-	while (i >= 0)
+	else
 	{
-		_putchar(str[i]);
-		i--;
+		for (i = 0; str[i] != '\0'; i++)
+			len++;
+
+		while (i >= 0 && str != NULL)
+		{
+			_putchar(str[i]);
+			i--;
+		}
 	}
 	return (len);
 }
