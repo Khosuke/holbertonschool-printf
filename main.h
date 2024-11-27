@@ -21,5 +21,6 @@ int recursion_int(int n);
 int print_str(va_list arg_list);
 int print_percent(va_list arg_list);
 int _putchar(char c);
+int (*get_function(char format))(va_list);
 
 #endif
