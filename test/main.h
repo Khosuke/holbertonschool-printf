@@ -1,7 +1,7 @@
-#ifndef TEST_MAIN_H
-#define TEST_MAIN_H
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdarg.h>
-#include <stdlib.h>
+#include <stddef.h>
 /**
  * struct format_type - Structure of format specifier
  * @specifier: the data type specifier
@@ -15,17 +15,12 @@ typedef struct format_type
 	int (*function)(va_list);
 } format_t;
 int _printf(const char *format, ...);
-int _putchar(char c);
 int print_char(va_list arg_list);
 int print_int(va_list arg_list);
+int recursion_int(int n);
 int print_str(va_list arg_list);
 int print_percent(va_list arg_list);
-int print_unsigned_int(va_list arg_list);
-int print_hexa_lower(va_list arg_list);
-int print_hexa_upper(va_list arg_list);
-int recursion_int(int n);
-int recursion_unsigned_int(unsigned int n);
-int recursion_hexa_lower(int n);
-int recursion_hexa_upper(int n);
+int _putchar(char c);
+int (*get_function(char format))(va_list);
 
 #endif
