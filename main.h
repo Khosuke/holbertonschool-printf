@@ -22,5 +22,10 @@ int print_str(va_list arg_list);
 int print_percent(va_list arg_list);
 int _putchar(char c);
 int (*get_function(char format))(va_list);
+int recursion_binary(unsigned int n);
+int print_binary(va_list arg_list);
+int print_reverse_str(va_list arg_list);
+int recursion_int(int n);
+int print_rot13(va_list arg_list);
 
 #endif

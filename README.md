@@ -21,7 +21,7 @@ To **run** this program **properly**, you need :
 
 ## Man page
 
-/* Man page */
+You can check the [man page](https://github.com/Khosuke/holbertonschool-printf/blob/main/man_3_printf.1) here.
 
 ## Test 
 
@@ -39,7 +39,7 @@ Here you can see that we have the exact **same output** as the **original printf
 
 ## Flowchart
 
-![Légende](https://i.ibb.co/nfbnWd0/Diagramme-sans-nom-drawio.png)
+![Légende](https://www.image-heberg.fr/files/17327875361404413593.png)
 
 ### Authors
 
