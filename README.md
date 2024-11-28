@@ -39,7 +39,7 @@ Here you can see that we have the exact **same output** as the **original printf
 
 ## Flowchart
 
-![Légende](https://i.ibb.co/nfbnWd0/Diagramme-sans-nom-drawio.png)
+![Légende](https://www.image-heberg.fr/files/17327875361404413593.png)
 
 ### Authors
 
