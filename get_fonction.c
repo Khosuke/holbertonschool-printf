@@ -66,7 +66,7 @@ int _printf(const char *format, ...)
 			{
 				_putchar('%');
 				_putchar(format[i + 1]);
-				len++;
+				len += 2;
 			}
 			i++;
 		}
