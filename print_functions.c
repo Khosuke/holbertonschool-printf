@@ -53,6 +53,7 @@ int print_reverse_str(va_list arg_list)
 	int j = 0;
 	int len = 0;
 	char *str = va_arg(arg_list, char *);
+
 	if (str == NULL)
 	{
 		str = "(null)";
