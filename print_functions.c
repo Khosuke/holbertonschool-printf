@@ -52,19 +52,20 @@ int print_reverse_str(va_list arg_list)
 	int i = 0;
 	int len = 0;
 	char *str = va_arg(arg_list, char *);
-
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-
 	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
 		len++;
 		i++;
 	}
-
+	while (i >= 0)
+	{
+		_putchar(str[i]);
+		i--;
+	}
 	return (len);
 }
 
