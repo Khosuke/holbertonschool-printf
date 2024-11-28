@@ -19,18 +19,16 @@ int recursion_int(int n)
 }
 
 /**
- * recursion_binary - convert an int into binary
- * @n: int to convert
- * Return: always 0
+ * recursion_unsigned_int - prints all digit of a positive number one by one
+ * @n: num to print
+ * Return: Always 0
  */
-
-int recursion_binary(unsigned int n)
+int recursion_unsigned_int(unsigned int n)
 {
-	if (n > 1)
+	if (n / 10)
 	{
-		recursion_binary(n / 2);
+		recursion_unsigned_int(n / 10);
 	}
-		_putchar(n % 2 + '0');
-
+	_putchar(n % 10 + '0');
 	return (0);
 }

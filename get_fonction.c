@@ -17,6 +17,10 @@ int (*get_function(char format))(va_list)
 		{"r", print_reverse_str},
 		{"R", print_rot13},
 		{"%", print_percent},
+		{"u", print_unsigned_int},
+		{"o", print_octal},
+		{"x", print_hexa_lower},
+		{"X", print_hexa_upper},
 		{NULL, NULL}
 	};
 

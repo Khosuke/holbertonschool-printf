@@ -15,17 +15,24 @@ typedef struct format_type
 	int (*function)(va_list);
 } format_t;
 int _printf(const char *format, ...);
+int _putchar(char c);
 int print_char(va_list arg_list);
-int print_int(va_list arg_list);
-int recursion_int(int n);
 int print_str(va_list arg_list);
 int print_percent(va_list arg_list);
-int _putchar(char c);
 int (*get_function(char format))(va_list);
-int recursion_binary(unsigned int n);
-int print_binary(va_list arg_list);
 int print_reverse_str(va_list arg_list);
-int recursion_int(int n);
 int print_rot13(va_list arg_list);
+int print_int(va_list arg_list);
+int print_unsigned_int(va_list arg_list);
+int print_binary(va_list arg_list);
+int print_octal(va_list arg_list);
+int print_hexa_lower(va_list arg_list);
+int print_hexa_upper(va_list arg_list);
+int recursion_int(int n);
+int recursion_unsigned_int(unsigned int n);
+int recursion_binary(unsigned int n);
+int recursion_octal(unsigned int n);
+int recursion_hexa_lower(int n);
+int recursion_hexa_upper(int n);
 
 #endif
