@@ -21,7 +21,7 @@ To **run** this program **properly**, you need :
 
 ## Man page
 
-[Man page](https://github.com/Khosuke/holbertonschool-printf/blob/main/man_3_printf.1)
+You can check the [man page](https://github.com/Khosuke/holbertonschool-printf/blob/main/man_3_printf.1) here.
 
 ## Test 
 
