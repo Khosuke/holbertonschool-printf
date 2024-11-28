@@ -49,7 +49,7 @@ int print_str(va_list arg_list)
 
 int print_reverse_str(va_list arg_list)
 {
-	int i = 0;
+	int i;
 	int len = 0;
 	char *str = va_arg(arg_list, char *);
 
