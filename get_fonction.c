@@ -21,6 +21,7 @@ int (*get_function(char format))(va_list)
 		{"o", print_octal},
 		{"x", print_hexa_lower},
 		{"X", print_hexa_upper},
+		{"S", print_nonprintchar},
 		{NULL, NULL}
 	};
 

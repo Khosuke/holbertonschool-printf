@@ -92,12 +92,10 @@ int print_rot13(va_list arg_list)
 	char *str = va_arg(arg_list, char *);
 	char c;
 
-
 	if (str == NULL)
 	{
 		str = "(null)";
 	}
-
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
@@ -116,6 +114,5 @@ int print_rot13(va_list arg_list)
 		len++;
 		i++;
 	}
-
 	return (len);
 }

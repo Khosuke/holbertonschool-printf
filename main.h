@@ -34,5 +34,6 @@ int recursion_binary(unsigned int n);
 int recursion_octal(unsigned int n);
 int recursion_hexa_lower(unsigned int n);
 int recursion_hexa_upper(unsigned int n);
+int print_nonprintchar(va_list arg_list);
 
 #endif
