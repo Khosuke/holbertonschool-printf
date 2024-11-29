@@ -62,7 +62,7 @@ int _printf(const char *format, ...)
 			{
 				len += f(arg_list);
 			}
-			else if (format[i + 1] != "\0")
+			else if (format[i + 1] != '\0')
 			{
 				_putchar('%');
 				_putchar(format[i + 1]);
