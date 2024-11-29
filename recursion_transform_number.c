@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * recursion_binary - convert an int into binary
+ * recursion_binary - convert an unsigned int into binary
  * @n: int to convert
- * Return: always 0
+ * Return: Always 0
  */
 
 int recursion_binary(unsigned int n)
@@ -40,6 +40,8 @@ int recursion_octal(unsigned int n)
  */
 int recursion_hexa_lower(int n)
 {
+		if (n < 0)
+		n = -n;
 	if (n / 16)
 	{
 		recursion_hexa_lower(n / 16);
@@ -57,6 +59,8 @@ int recursion_hexa_lower(int n)
  */
 int recursion_hexa_upper(int n)
 {
+	if (n < 0)
+		n = -n;
 	if (n / 16)
 	{
 		recursion_hexa_upper(n / 16);
