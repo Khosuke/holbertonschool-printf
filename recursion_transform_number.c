@@ -12,8 +12,7 @@ int recursion_binary(unsigned int n)
 	{
 		recursion_binary(n / 2);
 	}
-		_putchar(n % 2 + '0');
-
+	_putchar(n % 2 + '0');
 	return (0);
 }
 
@@ -40,8 +39,6 @@ int recursion_octal(unsigned int n)
  */
 int recursion_hexa_lower(unsigned int n)
 {
-		if (n < 0)
-		n = -n;
 	if (n / 16)
 	{
 		recursion_hexa_lower(n / 16);
@@ -59,8 +56,6 @@ int recursion_hexa_lower(unsigned int n)
  */
 int recursion_hexa_upper(unsigned int n)
 {
-	if (n < 0)
-		n = -n;
 	if (n / 16)
 	{
 		recursion_hexa_upper(n / 16);

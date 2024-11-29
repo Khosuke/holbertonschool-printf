@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
-#include "test_main.h"
+#include "main.h"
 
 int main(void)
 {
@@ -73,7 +73,6 @@ int main(void)
 	
 	/* Test spécifieur de format inconnu */
 	/* printf("%S\n", "Best\nSchool"); */
-	printf("%");
 	_printf("%");
 	
 	return (0);
