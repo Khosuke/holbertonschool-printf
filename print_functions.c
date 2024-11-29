@@ -7,7 +7,6 @@
  * @arg_list: arguments list
  * Return: len of the char
  */
-
 int print_char(va_list arg_list)
 {
 	_putchar(va_arg(arg_list, int));
@@ -19,7 +18,6 @@ int print_char(va_list arg_list)
  * @arg_list: arguments list
  * Return: len of the string
  */
-
 int print_str(va_list arg_list)
 {
 	int i = 0;
@@ -46,7 +44,6 @@ int print_str(va_list arg_list)
  * @arg_list: arguments list
  * Return: len of the string
  */
-
 int print_reverse_str(va_list arg_list)
 {
 	int i;
@@ -71,7 +68,6 @@ int print_reverse_str(va_list arg_list)
  * @arg_list: arguments list (unused)
  * Return: len of percent
  */
-
 int print_percent(va_list arg_list)
 {
 	(void)arg_list;
@@ -84,7 +80,6 @@ int print_percent(va_list arg_list)
  * @arg_list: arguments list
  * Return: len of the string
  */
-
 int print_rot13(va_list arg_list)
 {
 	int i = 0;

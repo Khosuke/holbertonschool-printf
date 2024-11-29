@@ -12,7 +12,7 @@ int main(void)
 	void *ptr;
 
 	ptr = (void *)0x7ffe637541f0;
-	
+
 	len = printf("Hello School !\n");
 	len2 = _printf("Hello School !\n");
 	compare_len = len - len2;
@@ -74,8 +74,8 @@ int main(void)
 	/* Test spécifieur de format inconnu */
 	/* printf("%S\n", "Best\nSchool"); */
 	_printf("TEST %S 123\n", "Hello[\n][\t] and [é][ô]");
-	len = _printf("%");
-    len2 = printf("%");
+	len = _printf("%S", "\n");
+    len2 = printf("%S", "\n");
     _printf("Length faux printf:[%d]\n", len);
     printf("Length vrai printf:[%d]\n", len2);
 

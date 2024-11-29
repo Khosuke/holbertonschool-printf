@@ -22,6 +22,7 @@ int print_nonprintchar(va_list arg_list)
 			if (str[i] < 15)
 			{
 				_putchar('0');
+				len++;
 			}
 			recursion_hexa_upper(str[i]);
 		}
