@@ -13,7 +13,6 @@ int print_int(va_list arg_list)
 	int len = 1;
 
 	num = va_arg(arg_list, int);
-
 	if (num < 0)
 	{
 		_putchar ('-');
@@ -26,8 +25,7 @@ int print_int(va_list arg_list)
 		num = 147483648;
 		len++;
 	}
-		recursion_int(num);
-
+	recursion_int(num);
 	while (num > 9)
 	{
 		num = num / 10;
@@ -41,7 +39,6 @@ int print_int(va_list arg_list)
  * @arg_list: list of arguments
  * Return: length of the unsigned int
  */
-
 int print_unsigned_int(va_list arg_list)
 {
 	unsigned int num = 0;

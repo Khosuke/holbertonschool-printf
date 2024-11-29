@@ -40,7 +40,6 @@ int (*get_function(char format))(va_list)
  * @format: string passed to the function
  * Return: lenght of the format and its arguments
  */
-
 int _printf(const char *format, ...)
 {
 
@@ -62,7 +61,11 @@ int _printf(const char *format, ...)
 			{
 				len += f(arg_list);
 			}
-			else if (format[i + 1] != '\0')
+			else if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
+			else
 			{
 				_putchar('%');
 				_putchar(format[i + 1]);

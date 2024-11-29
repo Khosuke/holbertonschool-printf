@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <limits.h>
-#include "main.h"
+#include "test_main.h"
 
 int main(void)
 {
-	int x = INT_MAX, y = INT_MIN, negativ_num = -123456;
-	int len, len2, compare_len, len_str, len_str2;
+	int x = INT_MAX, negativ_num = -123456;
+	int len, len2, compare_len;
 	unsigned int positiv_num;
 	double f = 1.23456789;
 	char c = 99;
 	void *ptr;
 
 	ptr = (void *)0x7ffe637541f0;
-
+	
 	len = printf("Hello School !\n");
 	len2 = _printf("Hello School !\n");
 	compare_len = len - len2;
@@ -67,13 +67,17 @@ int main(void)
     _printf("Votre _printf - Len:[%d]\n", len2);
 	
 	/* Test afficher valeur hexadecimal d'un entier */
-	printf("Resultat attendu - Hexadecimal Int: [%x]\n", -1024);
-	_printf("Votre _printf - Hexadecimal Int: [%x]\n", -1024);
+	printf("Resultat attendu - Hexadecimal Int: [%X][%X][%X][%X]\n", 24, 10, "\n", 220);
+	_printf("Votre _printf - Hexadecimal Int: [%X][%X][%X][%X]\n", 24, 10, "\n", 220);
 	
 	
 	/* Test spécifieur de format inconnu */
 	/* printf("%S\n", "Best\nSchool"); */
-	_printf("%");
-	
+	_printf("TEST %S 123\n", "Hello[\n][\t] and [é][ô]");
+	len = _printf("%");
+    len2 = printf("%");
+    _printf("Length faux printf:[%d]\n", len);
+    printf("Length vrai printf:[%d]\n", len2);
+
 	return (0);
 }

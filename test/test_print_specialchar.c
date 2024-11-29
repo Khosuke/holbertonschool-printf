@@ -10,15 +10,11 @@ int print_nonprintchar(va_list arg_list)
 {
 	unsigned char *str;
 	int i = 0, len = 0;
-	str = va_arg(arg_list, char*);
+	str = va_arg(arg_list, unsigned char*);
 
-	if (str == NULL)
-	{
-		str = "(null)";
-	}
 	while (str[i] != '\0')
 	{
-		if (str[i] < 32 || str[i] >= 127)
+		if ((str[i] < 32 || str[i] >= 127) && str[i])
 		{
 			_putchar('\\');
 			_putchar('x');
