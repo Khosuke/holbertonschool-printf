@@ -17,6 +17,7 @@ int (*get_function(char format))(va_list)
 		{"o", print_octal},
 		{"x", print_hexa_lower},
 		{"X", print_hexa_upper},
+		{"S", print_nonprintchar},
 		{"%", print_percent},
 		{NULL, NULL}
 	};
@@ -58,7 +59,7 @@ int _printf(const char *format, ...)
 			{
 				len += f(arg_list);
 			}
-			else
+			else if (format[i + 1] != '\0')
 			{
 				_putchar('%');
 				_putchar(format[i + 1]);

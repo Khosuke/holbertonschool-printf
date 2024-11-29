@@ -27,7 +27,8 @@ int print_hexa_upper(va_list arg_list);
 int recursion_int(int n);
 int recursion_unsigned_int(unsigned int n);
 int recursion_octal(unsigned int n);
-int recursion_hexa_lower(int n);
-int recursion_hexa_upper(int n);
+int recursion_hexa_lower(unsigned int n);
+int recursion_hexa_upper(unsigned int n);
+int print_nonprintchar(va_list arg_list);
 
 #endif

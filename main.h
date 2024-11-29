@@ -32,7 +32,7 @@ int recursion_int(int n);
 int recursion_unsigned_int(unsigned int n);
 int recursion_binary(unsigned int n);
 int recursion_octal(unsigned int n);
-int recursion_hexa_lower(int n);
-int recursion_hexa_upper(int n);
+int recursion_hexa_lower(unsigned int n);
+int recursion_hexa_upper(unsigned int n);
 
 #endif

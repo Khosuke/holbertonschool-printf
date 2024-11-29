@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <limits.h>
-#include "main.h"
+#include "test_main.h"
 
 int main(void)
 {
@@ -67,12 +67,14 @@ int main(void)
     _printf("Votre _printf - Len:[%d]\n", len2);
 	
 	/* Test afficher valeur hexadecimal d'un entier */
-	printf("Resultat attendu - Hexadecimal Int: [%x]\n", positiv_num);
-	_printf("Votre _printf - Hexadecimal Int: [%x]\n", positiv_num);
+	printf("Resultat attendu - Hexadecimal Int: [%x]\n", -1024);
+	_printf("Votre _printf - Hexadecimal Int: [%x]\n", -1024);
+	
 	
 	/* Test spécifieur de format inconnu */
-	printf("Resultat attendu - Unknown: [%r]\n");
-	_printf("Votre _printf - Unknown: [%r]\n");
+	/* printf("%S\n", "Best\nSchool"); */
+	printf("%");
+	_printf("%");
 	
 	return (0);
 }

@@ -76,7 +76,7 @@ int print_octal(va_list arg_list)
  * @n: the number to print
  * Return: Always 0
  */
-int recursion_hexa_lower(int n)
+int recursion_hexa_lower(unsigned int n)
 {
 	if (n / 16)
 	{
@@ -114,7 +114,7 @@ int print_hexa_lower(va_list arg_list)
  * @n: the number to print
  * Return: Always 0
  */
-int recursion_hexa_upper(int n)
+int recursion_hexa_upper(unsigned int n)
 {
 	if (n / 16)
 	{

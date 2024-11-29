@@ -38,7 +38,7 @@ int recursion_octal(unsigned int n)
  * @n: the number to print
  * Return: Always 0
  */
-int recursion_hexa_lower(int n)
+int recursion_hexa_lower(unsigned int n)
 {
 		if (n < 0)
 		n = -n;
@@ -57,7 +57,7 @@ int recursion_hexa_lower(int n)
  * @n: the number to print
  * Return: Always 0
  */
-int recursion_hexa_upper(int n)
+int recursion_hexa_upper(unsigned int n)
 {
 	if (n < 0)
 		n = -n;
